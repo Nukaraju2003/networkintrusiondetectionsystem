@@ -17,3 +17,12 @@ pip install -r requirements.txt
 
 python app.py
 ```
+
+
+## 💻 UI Screenshots
+
+### Dashboard
+![Home Page](./pics/dashboard.jpg)
+
+### Binary
+![Dashboard](./pics/binary.jpg)

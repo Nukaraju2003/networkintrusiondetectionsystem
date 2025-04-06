@@ -32,3 +32,9 @@ python app.py
 
 ### about
 ![Dashboard](./pics/about.jpg)
+
+
+
+## 🌐 Live Demo
+
+Check out the live demo here: [🔗 Click to View Website](https://networkintrusiondetectionsystem.netlify.app/)

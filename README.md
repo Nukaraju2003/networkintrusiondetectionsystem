@@ -18,6 +18,9 @@ pip install -r requirements.txt
 python app.py
 ```
 
+## 🌐 Live Demo
+
+Check out the live demo here: [🔗 Click to View Website](https://networkintrusiondetectionsystem.netlify.app/)
 
 ## 💻 UI Screenshots
 
@@ -35,6 +38,3 @@ python app.py
 
 
 
-## 🌐 Live Demo
-
-Check out the live demo here: [🔗 Click to View Website](https://networkintrusiondetectionsystem.netlify.app/)

@@ -26,3 +26,9 @@ python app.py
 
 ### Binary
 ![Dashboard](./pics/binary.jpg)
+
+### multi
+![Dashboard](./pics/multi.jpg)
+
+### about
+![Dashboard](./pics/about.jpg)

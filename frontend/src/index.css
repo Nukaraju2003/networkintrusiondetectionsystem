@@ -1,0 +1,277 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 91.2% 59.8%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-50 text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/30 shadow-lg rounded-xl transition-all duration-300 ease-out hover:shadow-xl hover:border-white/40;
+  }
+  
+  .glass-card-accent {
+    @apply bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm border border-white/40 shadow-lg rounded-xl transition-all duration-300 ease-out hover:shadow-xl;
+  }
+  
+  .glass-card-danger {
+    @apply bg-gradient-to-br from-white/90 to-rose-50/90 backdrop-blur-sm border border-rose-200/40 shadow-lg rounded-xl transition-all duration-300 ease-out hover:shadow-xl;
+  }
+  
+  .glass-card-success {
+    @apply bg-gradient-to-br from-white/90 to-emerald-50/90 backdrop-blur-sm border border-emerald-200/40 shadow-lg rounded-xl transition-all duration-300 ease-out hover:shadow-xl;
+  }
+
+  .input-field {
+    @apply rounded-lg border border-white/40 bg-white/70 px-4 py-2 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  
+  .fade-in-down {
+    animation: fadeInDown 0.5s ease-out forwards;
+  }
+
+  .status-dot {
+    @apply inline-block h-3 w-3 rounded-full mr-2;
+  }
+
+  .status-dot-normal {
+    @apply bg-emerald-400 shadow-sm shadow-emerald-500/50;
+  }
+
+  .status-dot-attack {
+    @apply bg-security-alert shadow-sm shadow-red-500/50;
+  }
+
+  .status-chip {
+    @apply text-xs font-medium py-1 px-3 rounded-full shadow-sm;
+  }
+
+  .status-chip-normal {
+    @apply bg-gradient-to-r from-green-100 to-green-50 text-green-800 border border-green-200/50;
+  }
+
+  .status-chip-attack {
+    @apply bg-gradient-to-r from-red-100 to-red-50 text-red-800 border border-red-200/50;
+  }
+
+  .status-chip-probe {
+    @apply bg-gradient-to-r from-blue-100 to-blue-50 text-blue-800 border border-blue-200/50;
+  }
+
+  .status-chip-dos {
+    @apply bg-gradient-to-r from-orange-100 to-orange-50 text-orange-800 border border-orange-200/50;
+  }
+
+  .status-chip-r2l {
+    @apply bg-gradient-to-r from-purple-100 to-purple-50 text-purple-800 border border-purple-200/50;
+  }
+
+  .status-chip-u2r {
+    @apply bg-gradient-to-r from-yellow-100 to-yellow-50 text-yellow-800 border border-yellow-200/50;
+  }
+  
+  .cyber-pattern {
+    background-image: 
+      radial-gradient(circle at 100% 100%, rgba(59, 130, 246, 0.1) 10px, transparent 0),
+      radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.05) 10px, transparent 0),
+      linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 0),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.02) 1px, transparent 0);
+    background-size: 20px 20px, 20px 20px, 20px 20px, 20px 20px;
+    background-position: 0 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 3s infinite ease-in-out;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.5s ease-out forwards;
+  }
+  
+  .animate-rotate-360 {
+    animation: rotate360 1.5s linear infinite;
+  }
+  
+  .animate-fade-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,10 @@
+
+# This directory will contain the model files
+# Place the following files here:
+# - random_forest_binary.pkl
+# - scaler_binary.pkl
+# - train_columns_binary.pkl
+# - random_forest_model_multi.pkl
+# - label_encoder_multi.pkl
+# - scaler_multi.pkl
+# - train_columns_multi.pkl
